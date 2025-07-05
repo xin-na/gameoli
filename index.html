@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Case of the Missing Briefcase</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      padding: 40px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+    h1, h2 {
+      color: #4a4a9c;
+    }
+    input {
+      padding: 8px;
+      margin-top: 8px;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #4a4a9c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #39397e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🕵️‍♂️ The Case of the Missing Briefcase</h1>
+    <p>It was supposed to be a normal Friday. Donuts were eaten. Stand-up was canceled. Spirits were high... until disaster struck. Someone has stolen the Executive Briefcase containing this quarter's extremely important... <em>Productivity Tokens™</em>.</p>
+    <p>You, the task force, have 15 minutes to solve the mystery and recover the briefcase before it's lost forever (or sent to Dave's garage).</p>
+
+    <div class="puzzle" id="puzzle1">
+      <h2>Puzzle 1: Breakroom Clue</h2>
+      <img src="images/breakroom.jpg" alt="Breakroom image" class="puzzle-image" />
+      <p>On a vending machine receipt you find: "One tuna sandwich, two gummy worms, one orange soda, and a mysterious item labeled 'CONFIDENTIAL'."<br>Which item number is most suspicious?</p>
+      <input type="text" id="answer1" placeholder="Your answer" />
+      <button onclick="checkAnswer(1)">Submit</button>
+    </div>
+
+    <div class="puzzle" id="puzzle2" style="display:none;">
+      <h2>Puzzle 2: Suspect Board</h2>
+      <p>Who’s the most suspicious?</p>
+      <ul>
+        <li>Dave: “I was teaching my dog how to use Slack.”</li>
+        <li>Maria: “I was stuck in a Zoom breakout room… alone.”</li>
+        <li>Igor: “I was coding. I promise. Look at my GitHub graph!”</li>
+        <li>Fernanda: “I was in the bathroom… since lunch.”</li>
+      </ul>
+      <input type="text" id="answer2" placeholder="Type the name" />
+      <button onclick="checkAnswer(2)">Submit</button>
+    </div>
+
+    <div class="puzzle" id="puzzle3" style="display:none;">
+      <h2>Puzzle 3: Conference Room Lock</h2>
+      <p>A sticky note reads:<br>"The passcode is the number of keyboards in the dev pod multiplied by the number of unpaid coffee mugs on the table."<br>
+      Assume: 5 desks, 1 keyboard each; 4 mugs since Q1.</p>
+      <input type="text" id="answer3" placeholder="Your answer" />
+      <button onclick="checkAnswer(3)">Submit</button>
+    </div>
+
+    <div id="success" style="display:none;">
+      <h2>🎉 You Escaped!</h2>
+      <p>The door creaks open... inside is the briefcase, resting atop a mountain of forgotten office supplies: fidget spinners, branded socks, and a rubber chicken wearing a tie.<br><br>
+      You’ve done it. The Productivity Tokens™ are safe. Dave is being questioned by HR. You may now return to your regularly scheduled scrolling.</p>
+    </div>
+  </div>
+
+  <script>
+    const answers = {
+      1: "4",
+      2: "dave",
+      3: "20"
+    };
+
+    function checkAnswer(puzzleNumber) {
+      const input = document.getElementById(`answer${puzzleNumber}`).value.trim().toLowerCase();
+      const correct = answers[puzzleNumber];
+
+      if (input === correct) {
+        alert("Correct!");
+        document.getElementById(`puzzle${puzzleNumber}`).style.display = "none";
+
+        if (puzzleNumber < 3) {
+          document.getElementById(`puzzle${puzzleNumber + 1}`).style.display = "block";
+        } else {
+          document.getElementById("success").style.display = "block";
+        }
+      } else {
+        alert("Try again!");
+      }
+    }
+  </script>
+</body>
+</html>
