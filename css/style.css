@@ -1,0 +1,99 @@
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      padding: 40px;
+      position: relative;
+      background-image: url('../images/vault1.jpg'); /* or full URL */
+      background-size: cover;       /* scales image to fill screen */
+      background-repeat: no-repeat; /* prevents tiling */
+      background-position: center;  /* centers the image */
+      background-attachment: fixed; /* optional: keeps it fixed when scrolling */
+    }
+
+    /* Gray overlay covering the full screen */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(100, 100, 100, 0.4); /* adjust gray and transparency */
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      position: relative;
+      z-index: 1; /* Content sits above the overlay */
+      padding: 20px;
+      color: #000; /* adjust for contrast if needed */
+    }
+
+    h1, h2 {
+      color: #4a4a9c;
+    }
+
+    input {
+      padding: 8px;
+      margin-top: 8px;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #4a4a9c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #39397e;
+    }
+    .puzzle-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;        /* crop to fill the container */
+      object-position: center;  /* show the center portion */
+      display: block;           /* remove inline spacing */
+      border-radius: 10px;
+      margin: 10px 0 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .hint {
+      font-style: italic;
+      margin-top: 5px;
+      color: #666;
+      display: none;
+    }
+    #timer {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #d9534f;
+    }
+
+.styled-button {
+  color: gray;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+  background-color: #e0e0e0;
+}

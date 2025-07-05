@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gameoli</title>
+
+  <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+  <audio id="bg-music" src="audio/bg-music.mp3" loop autoplay></audio>
+  <audio id="soundCorrect" src="audio/correct.mp3"></audio>
+  <audio id="soundWrong" src="audio/wrong.mp3"></audio>
+
+  <div class="overlay"></div>
+  
+  <div class="container">
+    <h1>🕵️‍♂️ The Case of the Missing Briefcase</h1>
+    
+  <div style="text-align: center;">
+      Time left: <span id="timer">15:00</span>
+      &emsp;
+      <button id="pauseBtn" class="styled-button">Pause Timer</button>
+      <button id="resumeBtn"  class="styled-button" style="display:none;">Resume Timer</button>
+    </div>
+    
+    <p>It was supposed to be a normal Friday. Donuts were eaten. Stand-up was canceled. Spirits were high... until disaster struck. Someone has stolen the Executive Briefcase containing this quarter's extremely important... <em>Productivity Tokens™</em>.</p>
+    <p>You, the task force, have 15 minutes to solve the mystery and recover the briefcase before it's lost forever.</p>
+
+    <div class="puzzle" id="puzzle1">
+      <h2>Puzzle 1: Breakroom Clue</h2>
+      <img src="images/game01-1.jpg" alt="Breakroom image" class="puzzle-image" />
+      <p>On a vending machine receipt you find: "One tuna sandwich, two gummy worms, one orange soda, and a mysterious item labeled 'CONFIDENTIAL'."<br>Which item number is most suspicious?</p>
+      <input type="text" id="answer1" placeholder="Your answer" onkeypress="submitOnEnter(event, 1)" />
+      <button onclick="checkAnswer(1)">Submit</button>
+      <button onclick="showHint(1)">Hint</button>
+      <p class="hint" id="hint1">It's not a snack. It's something top secret.</p>
+    </div>
+
+    <div class="puzzle" id="puzzle2" style="display:none;">
+      <h2>Puzzle 2: Suspect Board</h2>
+      <img src="images/game01-2.jpg" alt="Suspect board" class="puzzle-image" />
+      <p>Who's the most suspicious?</p>
+      <ul>
+        <li>Dave: "I was teaching my dog how to use Slack."</li>
+        <li>Maria: "I was stuck in a Zoom breakout room... alone."</li>
+        <li>Igor: "I was coding. I promise. Look at my GitHub graph!"</li>
+        <li>Fernanda: "I was in the bathroom... since lunch."</li>
+      </ul>
+      <input type="text" id="answer2" placeholder="Type the name" onkeypress="submitOnEnter(event, 2)" />
+      <button onclick="checkAnswer(2)">Submit</button>
+      <button onclick="showHint(2)">Hint</button>
+      <p class="hint" id="hint2">His alibi is oddly specific... and very weird.</p>
+    </div>
+
+    <div class="puzzle" id="puzzle3" style="display:none;">
+      <h2>Puzzle 3: Conference Room Lock</h2>
+      <img src="images/game01-3.jpg" alt="Conference room" class="puzzle-image" />
+      <p>A sticky note reads:<br>"The passcode is the number of keyboards in the dev pod multiplied by the number of unpaid coffee mugs on the table."<br>
+      Assume: 5 desks, 1 keyboard each; 4 mugs since Q1.</p>
+      <input type="text" id="answer3" placeholder="Your answer" onkeypress="submitOnEnter(event, 3)" />
+      <button onclick="checkAnswer(3)">Submit</button>
+      <button onclick="showHint(3)">Hint</button>
+      <p class="hint" id="hint3">5 desks × 4 mugs. Simple multiplication!</p>
+    </div>
+
+    <div id="success" style="display:none;">
+      <h2>🎉 You Escaped!</h2>
+      <img src="images/game01-4.jpg" alt="Celebration" class="puzzle-image" />
+      <p>The door creaks open... inside is the briefcase, resting atop a mountain of forgotten office supplies: fidget spinners, branded socks, and a rubber chicken wearing a tie.<br><br>
+      You’ve done it. The Productivity Tokens™ are safe. Dave is being questioned by HR. You may now return to your regularly scheduled scrolling.</p>
+    </div>
+
+    <div style="text-align: center;">
+      <br><button id="musicToggleBtn" class="styled-button">▶️ Play Music</button>
+    </div>
+  </div>
+  
+  <script src="js/main.js"></script>
+  <script src="js/timer.js"></script>
+
+</body>
+</html>
