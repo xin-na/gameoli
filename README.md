@@ -8,14 +8,11 @@ A simple web-based puzzle game built with TypeScript, Vite, and modern web techn
 
 ## 🧰 Tech Stack
 
-| Technology    | Purpose                          |
-|---------------|----------------------------------|
-| [TypeScript](https://www.typescriptlang.org/) | Safer, scalable JavaScript with static typing |
-| [Vite](https://vitejs.dev/)         | Fast dev server and bundler                  |
-| HTML5 & CSS3  | Layout and styling               |
-| Vanilla JS (migrated to TS) | Game logic and interactivity         |
-| [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) | Linting & formatting |
-| GitHub Pages  | Optional deployment platform     |
+- Typescript
+- Vite
+- HTML5 & CSS3
+- Vanilla JS (migrated to TS)
+- ESLint + Prettier
 
 ---
 
@@ -28,61 +25,54 @@ _(or run locally – instructions below)_
 
 ## 🧪 Running Locally
 
-# 1. Clone the repo
+1. Clone the repo
 git clone https://github.com/xin-na/gameoli.git
 cd gameoli
-
-# 2. Install dependencies
+2. Install dependencies
 npm install
-
-# 3. Start the development server
+3. Start the development server
 npm run dev
-
-# 4. Open in browser
+4. Open in browser
 http://localhost:5173
 
 ---
 
-🛠️ Planned Features
+## 🛠️ Planned Features
 
-⏱️ Improve game timer logic and animations
-🔊 Sound control and accessibility options
-🧩 Add more puzzles with levels of difficulty
-🌟 Migrate to React with modular components (in progress)
+⏱️ Improve game timer logic and animations <br>
+🔊 Sound control and accessibility options <br>
+🧩 Add more puzzles with levels of difficulty <br>
+🌟 Migrate to React with modular components (in progress) <br>
 📱 Responsive design improvements for mobile users
 
 ---
 
-📌 Roadmap
+## 📌 Roadmap
 
- ☑️ Convert to TypeScript
- ☑️ Add Vite build system
- ☑️ Create modular folder structure
- ⏹️ React component migration (planned)
- ⏹️ Automated testing with Jest/Cypress (planned)
- ⏹️ Dark mode toggle (optional)
+☑️ Convert to TypeScript <br>
+☑️ Add Vite build system <br>
+☑️ Create modular folder structure <br>
+⏹️ React component migration (planned) <br>
+⏹️ Automated testing with Jest/Cypress (planned) <br>
+⏹️ Dark mode toggle (optional)
 
 ---
 
-📄 License
+## 📄 License
 
 This project is licensed under the [ISC License](https://www.isc.org/licenses/).
 
 ---
 
-🙋‍♀️ Author
+## 🙋‍♀️ Author
 
-Cindy N.
-🔗 [LinkedIn](https://www.linkedin.com/in/xinna/)
-🤖 This codebase was created with the help from GPT-4o. 
+Cindy Na <br>
+🔗 [LinkedIn](https://www.linkedin.com/in/xinna/) <br>
+🤖 This codebase was created with the help from GPT-4o.  <br>
 📬 Reach out if you want to collaborate or playtest!
 
 ---
 
-🙌 Contributions
+## 🙌 Contributions
 
 Pull requests welcome! If you find a bug or have suggestions, please [open an issue](https://github.com/xin-na/gameoli/issues).
-
-
-
-
