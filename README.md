@@ -1,46 +1,115 @@
-# Gameoli - A Collection of Games for Remote Teams
+# 🎮 Gameoli
+
+A simple web-based puzzle game built with TypeScript, Vite, and modern web technologies.
 
 [![Play Now](https://img.shields.io/badge/Play-Now-green?style=for-the-badge)](https://gameoli.com)
 
-Welcome to **Gemeoli** — a growing collection of online games for remote teams. There’s only one game for now, but more are on the way, along with updates to a more modern tech stack.
+---
 
-The current game is called 🔐 **The Missing Briefcase**. It's a lighthearted online escape room game simulation. Solve a short series of puzzles with a silly storyline, a timer, background music, and optional sound effects — all built with HTML, CSS, and JavaScript. 
+## 📸 Preview
+
+![Game Screenshot](paulie-pomodoro-preview.png)
 
 ---
 
-## 🎮 Game Concept
+## 🧰 Tech Stack
 
-The team is trapped in the virtual breakroom. Someone has stolen the boss's briefcase... and you only have a few minutes to find it before the next all-hands meeting. Clues are hidden in puzzles. Solve them in order to escape!
-
----
-
-## ✨ Features
-
-- 🎭 Funny, themed storyline
-- 🧩 3 simple interactive puzzles
-- ⏱️ Countdown timer with pause/resume
-- 🎵 Background music toggle
-- 🔊 Sound effects for right/wrong answers
-- 🔒 Lock animation for puzzles
-- 💡 Optional hint system
+| Technology    | Purpose                          |
+|---------------|----------------------------------|
+| [TypeScript](https://www.typescriptlang.org/) | Safer, scalable JavaScript with static typing |
+| [Vite](https://vitejs.dev/)         | Fast dev server and bundler                  |
+| HTML5 & CSS3  | Layout and styling               |
+| Vanilla JS (migrated to TS) | Game logic and interactivity         |
+| [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) | Linting & formatting |
+| GitHub Pages  | Optional deployment platform     |
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Live Demo
 
-- **HTML/CSS/JavaScript** — Vanilla front-end setup
-- **No backend required** — All logic is client-side
-- **Responsive design** — Works well on desktop and tablets
-
----
-
-## 👏 Credits
-This game was inspired by the need for team building fun during remote work.
-Created with ☕, 🎶, and my AI agent named ChatGPT.
+🔗 [gameoli.com](https://gameoli.com)  
+_(or run locally – instructions below)_
 
 ---
 
-## 📄 License
-MIT License – free to use, remix, and share!
+## 📂 Project Structure
+
+├── index.html
+├── css/
+│ └── style.css
+├── js/ (or src/)
+│ └── main.ts
+├── images/
+│ └── background.jpg
+├── audio/
+│ └── background.mp3
+├── public/
+│ └── favicon, icons, etc.
+├── tsconfig.json
+├── package.json
+├── vite.config.ts
+├── .gitignore
+
+---
+
+## 🧪 Running Locally
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/xin-na/gameoli.git
+cd gameoli
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
+
+# 4. Open in browser
+http://localhost:5173
+
+---
+
+🛠️ Planned Features
+
+⏱️ Improve game timer logic and animations
+🔊 Sound control and accessibility options
+🧩 Add more puzzles with levels of difficulty
+🌟 Migrate to React with modular components (in progress)
+📱 Responsive design improvements for mobile users
+
+---
+
+📌 Roadmap
+
+ ☑️ Convert to TypeScript
+ ☑️ Add Vite build system
+ ☑️ Create modular folder structure
+ ⏹️ React component migration (planned)
+ ⏹️ Automated testing with Jest/Cypress (planned)
+ ⏹️ Dark mode toggle (optional)
+
+---
+
+📄 License
+
+This project is licensed under the [ISC License](https://www.isc.org/licenses/).
+
+---
+
+🙋‍♀️ Author
+
+Cindy N.
+🔗 [LinkedIn](https://www.linkedin.com/in/xinna/)
+🤖 This codebase was created with the help from GPT-4o. 
+📬 Reach out if you want to collaborate or playtest!
+
+---
+
+🙌 Contributions
+
+Pull requests welcome! If you find a bug or have suggestions, please [open an issue](https://github.com/xin-na/gameoli/issues).
+
+
 
 
