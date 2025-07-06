@@ -6,12 +6,6 @@ A simple web-based puzzle game built with TypeScript, Vite, and modern web techn
 
 ---
 
-## 📸 Preview
-
-![Game Screenshot](paulie-pomodoro-preview.png)
-
----
-
 ## 🧰 Tech Stack
 
 | Technology    | Purpose                          |
@@ -32,29 +26,8 @@ _(or run locally – instructions below)_
 
 ---
 
-## 📂 Project Structure
-
-├── index.html
-├── css/
-│ └── style.css
-├── js/ (or src/)
-│ └── main.ts
-├── images/
-│ └── background.jpg
-├── audio/
-│ └── background.mp3
-├── public/
-│ └── favicon, icons, etc.
-├── tsconfig.json
-├── package.json
-├── vite.config.ts
-├── .gitignore
-
----
-
 ## 🧪 Running Locally
 
-```bash
 # 1. Clone the repo
 git clone https://github.com/xin-na/gameoli.git
 cd gameoli
