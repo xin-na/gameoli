@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gameoli</title>
 
-  <link rel="stylesheet" href="css/style.css">  
+  <link rel="stylesheet" href="src/style.css">  
 </head>
 <body>
-  <audio id="bg-music" src="audio/bg-music.mp3" loop autoplay></audio>
-  <audio id="soundCorrect" src="audio/correct.mp3"></audio>
-  <audio id="soundWrong" src="audio/wrong.mp3"></audio>
+  <audio id="bg-music" src="public/audio/bg-music.mp3" loop autoplay></audio>
+  <audio id="soundCorrect" src="public/audio/correct.mp3"></audio>
+  <audio id="soundWrong" src="public/audio/wrong.mp3"></audio>
 
   <div class="overlay"></div>
   
@@ -32,7 +32,7 @@
       <img src="images/game01-1.jpg" alt="Breakroom image" class="puzzle-image" />
       <p>On a vending machine receipt you find: "One tuna sandwich, two gummy worms, one orange soda, and a mysterious item labeled 'CONFIDENTIAL'."<br>Which item number is most suspicious?</p>
       <input type="text" id="answer1" placeholder="Your answer" onkeypress="submitOnEnter(event, 1)" />
-      <button onclick="checkAnswer(1)">Submit</button>
+      <button onclick="checkAnswer({ puzzleNumber: 1 })">Submit</button>
       <button onclick="showHint(1)">Hint</button>
       <p class="hint" id="hint1">It's not a snack. It's something top secret.</p>
     </div>
@@ -48,7 +48,7 @@
         <li>Fernanda: "I was in the bathroom... since lunch."</li>
       </ul>
       <input type="text" id="answer2" placeholder="Type the name" onkeypress="submitOnEnter(event, 2)" />
-      <button onclick="checkAnswer(2)">Submit</button>
+      <button onclick="checkAnswer({ puzzleNumber: 2 })">Submit</button>
       <button onclick="showHint(2)">Hint</button>
       <p class="hint" id="hint2">His alibi is oddly specific... and very weird.</p>
     </div>
@@ -59,7 +59,7 @@
       <p>A sticky note reads:<br>"The passcode is the number of keyboards in the dev pod multiplied by the number of unpaid coffee mugs on the table."<br>
       Assume: 5 desks, 1 keyboard each; 4 mugs since Q1.</p>
       <input type="text" id="answer3" placeholder="Your answer" onkeypress="submitOnEnter(event, 3)" />
-      <button onclick="checkAnswer(3)">Submit</button>
+      <button onclick="checkAnswer({ puzzleNumber: 3 })">Submit</button>
       <button onclick="showHint(3)">Hint</button>
       <p class="hint" id="hint3">5 desks × 4 mugs. Simple multiplication!</p>
     </div>
@@ -76,8 +76,8 @@
     </div>
   </div>
   
-  <script src="js/main.js"></script>
-  <script src="js/timer.js"></script>
+  <script src="src/main.ts"></script>
+  <script src="src/timer.ts"></script>
 
 </body>
 </html>

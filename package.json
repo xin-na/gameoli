@@ -1,0 +1,29 @@
+{
+  "name": "00-gameoli",
+  "version": "1.0.0",
+  "description": "[![Play Now](https://img.shields.io/badge/Play-Now-green?style=for-the-badge)](https://gameoli.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xin-na/gameoli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xin-na/gameoli/issues"
+  },
+  "homepage": "https://github.com/xin-na/gameoli#readme",
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^7.0.2"
+  }
+
+  
+}
